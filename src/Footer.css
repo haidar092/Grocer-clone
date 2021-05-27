@@ -1,0 +1,27 @@
+.footerarea{
+    background-color: #232f3e;
+    width: 100%;
+    min-height: 200px;
+    color: whitesmoke;
+}
+.footerarae__top{
+    background-color: #354558;
+    min-height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.footerarae__link{
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footerarae__araelink{
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
