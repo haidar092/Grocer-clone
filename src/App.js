@@ -10,7 +10,7 @@ import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 import { useEffect } from 'react'
 import Contact from './Contact';
-import Error from './Error';
+
 
 function App() {
     const [{ loggedinuser }, dispatch] = useStateValue();
@@ -38,26 +38,24 @@ return (
         <div className="app">
             <Switch>
 
-                <Route exact path='/checkout'>
+                <Route  path='/checkout'>
                     <Header />
 
                     <Checkout />
                 </Route>
-                <Route exact path='/login'>
+                <Route  path='/login'>
                     <Login />
                 </Route>
-                <Route exact path='/'>
+                <Route  path='/'>
                     <Header />
                     <NavLinks />
                     <Home />
                     <Footer />
                 </Route>
-                <Route exact path="/Contact" >
+                <Route  path="/Contact" >
                 <Contact />
                 </Route>
-                <Route component={Error}  >
-                <Error />
-                </Route>
+                
                 
 
             </Switch>
