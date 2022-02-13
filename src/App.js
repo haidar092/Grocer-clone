@@ -11,11 +11,13 @@ import { auth } from './firebase';
 import { useEffect } from 'react'
 import Contact from './Contact';
 
+import Chackout from './Chackout';
+
 
 function App() {
     const [{ loggedinuser }, dispatch] = useStateValue();
     useEffect(() => {
-        const unsubscribe=auth.onAuthStateChanged((userauth) => {
+        const unsubscribe = auth.onAuthStateChanged((userauth) => {
             if (userauth) {
                 dispatch({
                     type: 'SET_LOGIN',
@@ -28,40 +30,46 @@ function App() {
                 })
             }
         })
-    return () => {
-        unsubscribe();
-    }
-}, [])
+        return () => {
+            unsubscribe();
+        }
+    }, [])
 
-return (
-    <Router>
-        <div className="app">
-            <Switch>
+    return (
+        <Router>
+            <div className="app">
+                <Switch>
 
-                <Route  path='/checkout'>
-                    <Header />
+                    <Route exact path='/checkout'>
+                        <Header />
 
-                    <Checkout />
-                </Route>
-                <Route  path='/login'>
-                    <Login />
-                </Route>
-                <Route  path='/'>
-                    <Header />
-                    <NavLinks />
-                    <Home />
-                    <Footer />
-                </Route>
-                <Route  path="/Contact" >
-                <Contact />
-                </Route>
-                
-                
+                        <Checkout />
+                    </Route>
+                    <Route exact path='/login'>
+                        <Login />
+                    </Route>
+                    <Route exact path='/'>
+                        <Header />
+                        <NavLinks />
+                        <Home />
+                        <Footer />
+                    </Route>
+                    <Route exact path='/Contact' component={Contact} >
+                        <Contact />
+                    </Route>
+                    
+                    
+                    <Route exact path='/chackout'> 
+                    <Chackout/>
 
-            </Switch>
-        </div>
-    </Router>
-);
+                    </Route>
+
+
+
+                </Switch>
+            </div>
+        </Router>
+    );
 
 
 };

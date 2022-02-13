@@ -9,7 +9,7 @@ function NavLinks() {
                     <Link>Today's Deals</Link>
                     <Link>Coustomer Service</Link>
                     <Link>Gift's Card</Link>
-                    <Link>Registery</Link>
+                    <Link to='/login'>Registery</Link>
                     <Link>Sell</Link>
                 </div>
             </div>

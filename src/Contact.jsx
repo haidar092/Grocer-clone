@@ -22,7 +22,7 @@ const Contact = () => {
     };
     const formSubmit = (e) => {
         e.preventDefault();
-        alert(`my name is${data.fullname}. mobile number is ${data.phone}. and email is ${data.email} ,here is i want to say ${data.msg}`);
+        alert(`my name is ${data.fullname}. mobile number is ${data.phone}. and email is ${data.email} ,here is i want to say ${data.msg}`);
        
     };
     return (

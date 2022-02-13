@@ -5,14 +5,12 @@ import './Header.css'
 import { Link } from 'react-router-dom';
 import {auth} from './firebase';
 import  ShoppingBasketIcon  from '@material-ui/icons/ShoppingBasket';
-import Contact from './Contact';
-import { ListItemSecondaryAction } from '@material-ui/core';
-import { NavItem } from 'react-bootstrap';
-import product from './Product';
+
+
 
 function Header(){
     
-    const [{cart,loggedinuser},  dispatch] = useStateValue() ;
+    const [{cart,loggedinuser}] = useStateValue() ;
  
     const logoutuser = () => {
         if(loggedinuser){

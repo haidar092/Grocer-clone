@@ -2,6 +2,8 @@ import React from 'react'
 import CurrencyFormat from 'react-currency-format';
 import { Button } from 'react-bootstrap';
 import { useStateValue } from './StateProvider';
+
+import { Link } from 'react-router-dom';
 import './Subtotal.css'
 function Subtotal() {
 
@@ -25,7 +27,7 @@ function Subtotal() {
                 thousandSeprator={true}
                 prefix={'PKR'}
             />
-            <Button className='checkout__button'>Proceed to Checkout</Button>
+            <Button variant="outline-dark">  <Link to='/chackout'>Proceed to Checkout</Link></Button>
 
         </div>
     )
